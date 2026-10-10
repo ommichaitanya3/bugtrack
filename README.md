@@ -89,3 +89,8 @@ Code0 (CodeZero extension) was used in this project. Every change was planned by
 ## Challenges
 - The CodeZero plan-submission step initially showed a plans-directory issue. I informed the StartupMeu team and continued setup. Later the plan workflow worked and all code was generated through approved plans.
 - A PowerShell-created `.gitignore` and `README.md` were UTF-16 encoded, so Git did not ignore `.env` at first. I found it with `git check-ignore`, re-saved the files as ASCII/UTF-8, and confirmed `.env` was never committed.
+
+4. Frontend part B: generated dashboard with stats cards, bug list, debounced search, status filter, reusable bug form with validation, and delete confirmation using CodeZero (plan approved). Verified in browser (create, edit, filter, search, delete).
+
+## AI-Assisted Development Experience
+I used Code0 (CodeZero) in plan-first mode: for each phase I wrote a detailed prompt, reviewed the plan it proposed, approved it, and then read and tested the generated code myself. The tool was fast at scaffolding the backend and the React UI, but it did not run tests, so I verified every phase manually with Thunder Client, MongoDB Compass and the browser. I also caught and fixed an issue the AI did not cause: PowerShell-created files were UTF-16, which stopped Git from ignoring `.env`, and I debugged it with `git check-ignore`. This workflow taught me to treat AI output as a draft that I must understand, test and own.
