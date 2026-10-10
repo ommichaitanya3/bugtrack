@@ -1,6 +1,6 @@
 # BugTrack
 
-A MERN stack bug tracking application where users can register, log in, and manage their own bugs. (Work in progress)
+A MERN stack bug tracking application where users can register, log in, and manage their own bugs.
 
 ## Key Features
 - User registration and login with JWT authentication
@@ -21,8 +21,8 @@ A MERN stack bug tracking application where users can register, log in, and mana
 - [x] User model, register and login (JWT)
 - [x] Bug CRUD APIs, JWT middleware, stats endpoint
 - [x] React client setup, auth pages, protected routes
-- [ ] Bug list, filters, create/edit form, dashboard
-- [ ] Final testing and polish
+- [x] Bug list, filters, create/edit form, dashboard
+- [x] Final testing and polish
 
 ## Project Structure
 ```
@@ -85,12 +85,11 @@ Code0 (CodeZero extension) was used in this project. Every change was planned by
 1. Backend phase 1: generated db.js, server.js, User model, auth controller and routes using CodeZero (plan reviewed and approved by me). Verified with Thunder Client and MongoDB Compass.
 2. Backend phase 2: generated JWT middleware, Bug model, bug controller and routes using CodeZero (plan reviewed and approved). Verified with Thunder Client (create, list, stats, 401 without token).
 3. Frontend part A: generated axios instance, AuthContext, ProtectedRoute, login/register pages and routing using CodeZero (plan approved). Verified in browser (register auto-login, refresh persistence, logout, login).
-
-## Challenges
-- The CodeZero plan-submission step initially showed a plans-directory issue. I informed the StartupMeu team and continued setup. Later the plan workflow worked and all code was generated through approved plans.
-- A PowerShell-created `.gitignore` and `README.md` were UTF-16 encoded, so Git did not ignore `.env` at first. I found it with `git check-ignore`, re-saved the files as ASCII/UTF-8, and confirmed `.env` was never committed.
-
 4. Frontend part B: generated dashboard with stats cards, bug list, debounced search, status filter, reusable bug form with validation, and delete confirmation using CodeZero (plan approved). Verified in browser (create, edit, filter, search, delete).
 
 ## AI-Assisted Development Experience
 I used Code0 (CodeZero) in plan-first mode: for each phase I wrote a detailed prompt, reviewed the plan it proposed, approved it, and then read and tested the generated code myself. The tool was fast at scaffolding the backend and the React UI, but it did not run tests, so I verified every phase manually with Thunder Client, MongoDB Compass and the browser. I also caught and fixed an issue the AI did not cause: PowerShell-created files were UTF-16, which stopped Git from ignoring `.env`, and I debugged it with `git check-ignore`. This workflow taught me to treat AI output as a draft that I must understand, test and own.
+
+## Challenges
+- The CodeZero plan-submission step initially showed a plans-directory issue. I informed the StartupMeu team and continued setup. Later the plan workflow worked and all code was generated through approved plans.
+- A PowerShell-created `.gitignore` and `README.md` were UTF-16 encoded, so Git did not ignore `.env` at first. I found it with `git check-ignore`, re-saved the files as ASCII/UTF-8, and confirmed `.env` was never committed.
